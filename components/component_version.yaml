@@ -1,0 +1,13 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: ComponentVersion
+metadata:
+  name: incident-management-app
+  namespace: ocm-system
+spec:
+  interval: 1m0s
+  component: github.com/sidhishruti22/icapp
+  version:
+    semver: ">=1.0.5"
+  repository:
+    url: incidents-mgmt-ocm.int.repositories.cloud.sap
+  serviceAccountName: air-gapped-ops
