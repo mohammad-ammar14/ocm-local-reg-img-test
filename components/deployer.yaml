@@ -1,0 +1,14 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: FluxDeployer
+metadata:
+  name: incident-management-deployer-test
+  namespace: ocm-system
+spec:
+  sourceRef:
+    kind: Resource
+    name: incident-management-deployment
+  kustomizationTemplate:
+    interval: 1m0s
+    path: ./
+    prune: true
+    targetNamespace: default
